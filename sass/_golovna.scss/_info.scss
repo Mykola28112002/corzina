@@ -1,0 +1,86 @@
+
+.info__title {
+    padding: 10px 0;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    text-align: center;
+    width: 70%;
+    font-size: 30px;
+    color: gold;
+    background-color:   rgba(47, 48, 58, 0.4);
+    border-radius: 20px;
+    @media screen and (min-width: 375px) {
+        top: 300px;
+        left: 55px; 
+    }
+    @media screen and (min-width: 425px) {
+        top: 350px;
+        left: 65px; 
+    }
+    @media screen and (min-width: 768px) {
+        
+        font-size: 40px;
+        top: 650px;
+        left: 115px; 
+
+        
+    }
+  
+}
+.info__titles {
+   
+    font-size: 20px;
+    width: 40%;
+
+}
+.golovna-flex {
+    display: flex;
+    justify-content: center
+}
+.info__box {
+    
+    justify-content: space-around;
+   
+}
+.contacts__link {
+    font-size: 15px;
+}
+.info__title-img {
+    height: 100%;
+}
+.containers-golovna {
+    
+
+    padding-top: 52px;
+}
+.info__img {
+    width: 320px;
+    @media screen and (min-width: 375px) {
+        width: 375px;
+    }
+    @media screen and (min-width: 425px) {
+        width: 425px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+}
+.info__ulublene-title {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: floralwhite;
+    background-color: goldenrod;
+}
+.ulublene__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.ulublene__text {
+    font-size: 15px;
+    font-family: serif;
+}
