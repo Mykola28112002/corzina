@@ -299,22 +299,6 @@
         </div>
     </footer>
 <script src="./js/menu.js"></script>
-<script src="./js/cart.js"></script>
-<script src="./js/corzina.js"></script>
-<script src="./js/simplebar.js"></script>
-<script>
-    (() => {
-        document
-            .querySelector(' .js-speaker-form')
-            .addEventListener('sumbit', e => {
-                e.preventDefault();
-
-                new FormData(e.currentTarget).forEarch((value, name) =>
-                    console.log(`${name}: ${value}`),
-                );
-            });
-    })();
-</script>
 </body>
 
 </html>
