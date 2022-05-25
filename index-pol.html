@@ -27,6 +27,94 @@
                 <span class="cart__quantity">0</span>
             </button>
         </div>
+        <div data-modals class="cart backdrop is-hidden">
+            <div class="modal">
+                <button data-modal-closes class="modal__button" type="submit">
+                    <svg class="cap__svg" width="24" height="16" aria-label="перемикач мобільного вікна">
+                        <use class="icon-cross" href="images/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h1 class="cart__title">Корзина</h1>
+                <ul class="cart-content__list list__js">
+                    <!-- <li class="cart__item">
+                                                <div class="cart__box">
+                                                    <div>
+                                                        <img class="image-switch__img img" src="./images/pngwing.com.jpg" alt="" width="130">
+                                                        <h2 class="cart-item__title">Класичний .... 40 szt</h2>
+                                                    </div>
+                                                    <p class="menu__price">134,99zl</p>
+                                                    <button class="corzina-btn__close">
+                                                        <svg class="btn__close-svg">
+                                                            <use class="icon-cross" href="images/symbol-defs.svg#icon-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </li> -->
+        
+                </ul>
+                <div class="cart-content__fullprice">
+                    <span>Разом:</span>
+                    <span class="fullprice">0 zl</span>
+                </div>
+                <!-- <div class="flex">
+                                            <button type="button" class="cart__btn-order">
+                                                Очистити корзину
+                                            </button>
+                                        </div> -->
+        
+                <form class="js-speaker-form">
+                    <h1 class="form__title">
+                        Оформити замовлення
+                    </h1>
+        
+                    <div>
+        
+                        <div class="js-box">
+                            <label class="js-box__label" for="name">
+                                Ім'я
+                            </label>
+                            <input class="js-box__input" type="text" name="user-name" id="name">
+                        </div>
+        
+                        <div class="js-box">
+                            <label class="js-box__label" for="tel">
+                                Телефон
+                            </label>
+                            <input class="js-box__input" type="tel" id="tel" name="tel">
+        
+                        </div>
+        
+                        <div class="js-box">
+                            <label class="js-box__label" for="mail">
+                                Пошта
+                            </label>
+                            <input class="js-box__input" type="email" id="mail" name="mail">
+                        </div>
+        
+                        <div class="js-box">
+                            <label class="js-box__label" for="comment">Комментарий</label>
+                            <textarea class="js-box__textarea" name="comment" id="comment" rows="8"
+                                placeholder="Введите текст"></textarea>
+                        </div>
+        
+                        <div class="js-item">
+                            <label class="js-item__conditions">
+                                <input class="js-item__checkbox" type="checkbox" name="conditions" value="conditions">
+                                <span class="js-item__conditions-text">
+                                    Соглашаюсь с рассылкой и принимаю <a class="js-item__conditions-link" href="">Условия
+                                        договора</a>
+                                </span>
+                            </label>
+                            <button class="form__btn-order">
+                                Відправити
+                            </button>
+        
+                        </div>
+        
+                    </div>
+                </form>
+            </div>
+        </div>
         <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-btn>
             <svg class="cap__svg" width="24" height="16" aria-label="перемикач мобільного вікна">
                 <use class="icon-cross" href="images/symbol-defs.svg#icon-close"></use>
