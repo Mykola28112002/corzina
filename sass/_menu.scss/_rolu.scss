@@ -6,6 +6,32 @@
 .rolu__title {
     margin-bottom: 5px;
 }
-.rolu__item:not(:last-child) {
-    border-bottom: 1px solid slategrey;
+.rolu__list,
+.maki-rolu__list,
+.hot-rolu__list,
+.futomaki-rolu__list,
+.nigiri-rolu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.nigiri-rolu__item,
+.futomaki-rolu__item,
+.hot-rolu__item,
+.maki-rolu__item,
+.rolu__item {
+    padding-top: 3px;
+    box-shadow: 0 0 5px 5px grey;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 15px;
+
+}
+.futomaki-rolu__text,
+.hot-rolu__text {
+    text-align: center;
 }

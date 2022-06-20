@@ -87,6 +87,9 @@ productsBtn.forEach(el => {
 
 		
 		self.disabled = true;
+
+		localStorageHost();
+		
 	});
 
 
@@ -95,7 +98,41 @@ productsBtn.forEach(el => {
 
 cartProductsList.addEventListener('click', (e) => {
 	deleteProducts(e.target.closest('.product'));
-	
+	localStorageHost();
 });
 
 
+
+const localStorageHost = () => {
+	const parse = cartProductsList.outerHTML;
+	sessionStorage.setItem("cartProductsList", JSON.stringify(parse));
+	
+	const savedSettings = sessionStorage.getItem("cartProductsList");
+	const parsedSettings = JSON.parse(savedSettings);
+	
+    key = "cartProductsList";
+value = JSON.stringify(parse);
+console.log("parsedSettings", parsedSettings);
+
+
+	const save = (key, value) => {
+try {
+	const serializedState = JSON.stringify(value);
+	localStorage.setItem(key, serializedState);
+} catch (error) {
+	console.error("Set state error: ", error.message);
+}
+};
+
+const load = key => {
+try {
+	const serializedState = localStorage.getItem(key);
+	return serializedState === null ? undefined : JSON.parse(serializedState);
+} catch (error) {
+	console.error("Get state error: ", error.message);
+}
+};
+
+	
+
+}

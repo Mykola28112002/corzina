@@ -77,10 +77,59 @@
 .ulublene__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 20px 0;
+    
 }
 .ulublene__text {
     font-size: 15px;
     font-family: serif;
+}
+.tabl {
+    display: flex;
+    justify-content: space-around
+}
+
+.tabl__img {
+    width: 320px;
+
+    @media screen and (min-width: 374px) {
+        width: 374px;
+    }
+
+    padding: 5px;
+
+    @media screen and (min-width: 375px) {
+        width: 375px;
+    }
+
+    @media screen and (min-width: 405px) {
+        width: 405px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+.tabl__title {
+    text-align: center;
+    border-top: 1px solid gold;
+    padding-top: 10px;
+    color: gold;
+    font-size: 15px;
+}
+.ulublene__link {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 5px grey;
+    
+}
+.ulublene__item {
+    margin-bottom: 20px;
+    &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
 }

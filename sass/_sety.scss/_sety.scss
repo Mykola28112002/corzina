@@ -1,18 +1,26 @@
 .sety__list-box {
     width: 50%;
 }
+
 .sety__box {
     width: 100%;
 }
+
 .sety__list {
+    margin-top: 10px;
     display: flex;
+    justify-content: space-evenly;
     margin-bottom: 10px;
+    flex-wrap: wrap;
+
 }
+
 .sety__title {
-    text-align: center ;
+    text-align: center;
 }
+
 .sety__title {
-   
+
     position: absolute;
     font-size: 35px;
     font-family: "Oswald";
@@ -20,16 +28,24 @@
     margin: 45px 0;
     background-color: none;
 }
+
 .sety__boxs {
     display: flex;
     justify-content: center;
 }
+
 .sety__item {
+    padding-top: 3px;
+    box-shadow: 0 0 5px 5px gray;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    &:not(:last-child) {
-       margin-bottom: 10px;
-    
+    width: 150px;
+    margin-bottom: 15px;
+
+    &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+
     }
 }
