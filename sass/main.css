@@ -149,6 +149,11 @@ a {
   text-align: center;
 }
 
+.corzina-btn,
+.cart-btn-open {
+  display: none;
+}
+
 /* меню */
 .rolu__img {
   display: block;
@@ -382,6 +387,9 @@ footer {
 
 .footer__dostava {
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: gainsboro;
+  border-bottom: 1px solid gold;
 }
 
 .info__title {
