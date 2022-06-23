@@ -20,8 +20,8 @@
 .futomaki-rolu__item,
 .hot-rolu__item,
 .maki-rolu__item,
-.rolu__item {
-    padding-top: 3px;
+.rolu__item,
+.sety__item {
     box-shadow: 0 0 5px 5px grey;
     display: flex;
     justify-content: space-around;
@@ -29,7 +29,15 @@
     align-items: center;
     width: 150px;
     margin-bottom: 15px;
-
+    @media screen and(max-width: 320px) {
+        width: 130px;
+    }
+    & .image-switch__img.img {
+    width: 150px;
+    @media screen and(max-width: 320px) {
+        width: 130px;
+    }
+}
 }
 .futomaki-rolu__text,
 .hot-rolu__text {

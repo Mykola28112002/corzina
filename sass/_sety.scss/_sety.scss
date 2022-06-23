@@ -35,15 +35,13 @@
 }
 
 .sety__item {
-    padding-top: 3px;
     box-shadow: 0 0 5px 5px gray;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     width: 150px;
     margin-bottom: 15px;
-
+    justify-content: space-between;
     &:nth-last-child(-n + 2) {
         margin-bottom: 0;
 

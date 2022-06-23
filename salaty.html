@@ -13,13 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
     <title>TU TAJ</title>
-    <link rel="icon" type="image/png" href="./images/insta.jpg" />
+    <link rel="icon" type="image/png" href="./images/logo.png" />
 </head>
 
 <body>
     <header class="cap">
         <div class="cap-flex">
-            <a class="cap__logo" href="./index.html">TU TAJ</a>
+            <a class="cap__logo" href="./index.html"><img src="./images/logo.png" width="40" alt="">
+                <span class="cap__logj-span">TU TAJ</span></a>
             <button data-modal-opens type="button" class="cart-btn-open" tabindex="0">
                 <svg class="cap__corzina-svg">
                     <use class="icon-cross" href="images/symbol-defs.svg#icon-cart"></use>
@@ -35,10 +36,12 @@
                     </svg>
                 </button>
                 <h1 class="cart__title">Корзина</h1>
-                <ul class="cart-content__list list__js">
-
-
-                </ul>
+                <div class="box__js">
+                    <ul class="cart-content__list list__js">
+                    
+                
+                    </ul>
+                </div>
                 <div class="cart-content__fullprice">
                     <span>Разом:</span>
                     <span class="fullprice">0 zl</span>
@@ -182,7 +185,7 @@
             <ul class="footer__instnetwork">
     
                 <li>
-                    <a class="footer__inst" href="https://www.instagram.com/sushi.szcz.ko/">
+                    <a class="footer__inst" href="https://www.instagram.com/sushi.szcz.tutaj/">
                         <img src="./images/insta.jpg" alt="" width="30px">
                     </a>
                 </li>
@@ -211,6 +214,7 @@
 <script src="./js/menu.js"></script>
 <script src="./js/cart.js"></script>
 <script src="./js/corzina.js"></script>
+<script src="./js/form.js"></script>
 <script>
     (() => {
         document

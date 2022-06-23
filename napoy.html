@@ -13,13 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
     <title>TU TAJ</title>
-    <link rel="icon" type="image/png" href="./images/insta.jpg" />
+    <link rel="icon" type="image/png" href="./images/logo.png" />
 </head>
 
 <body>
 <header class="cap">
     <div class="cap-flex">
-        <a class="cap__logo" href="./index.html">TU TAJ</a>
+        <a class="cap__logo" href="./index.html"><img src="./images/logo.png" width="40" alt="">
+            <span class="cap__logj-span">TU TAJ</span></a>
         <button data-modal-opens type="button" class="cart-btn-open" tabindex="0">
             <svg class="cap__corzina-svg">
                 <use class="icon-cross" href="images/symbol-defs.svg#icon-cart"></use>
@@ -35,23 +36,12 @@
                 </svg>
             </button>
             <h1 class="cart__title">Корзина</h1>
-            <ul class="cart-content__list list__js">
-                <!-- <li class="cart__item">
-                            <div class="cart__box">
-                                <div>
-                                    <img class="image-switch__img img" src="./images/pngwing.com.jpg" alt="" width="130">
-                                    <h2 class="cart-item__title">Класичний .... 40 szt</h2>
-                                </div>
-                                <p class="menu__price">134,99zl</p>
-                                <button class="corzina-btn__close">
-                                    <svg class="btn__close-svg">
-                                        <use class="icon-cross" href="images/symbol-defs.svg#icon-close"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </li> -->
-    
-            </ul>
+            <div class="box__js">
+                <ul class="cart-content__list list__js">
+                 
+            
+                </ul>
+            </div>
             <div class="cart-content__fullprice">
                 <span>Разом:</span>
                 <span class="fullprice">0 zl</span>
@@ -180,7 +170,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <img class="image-switch__img img" src="./images/orange.jpg" alt="" width="160">
+                        <img class="image-switch__img img" src="./images/orange.jpg" alt="" >
         
         
                     </li>
@@ -195,7 +185,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <img class="image-switch__img img" src="./images/mojito.jpg" alt="" width="140">
+                        <img class="image-switch__img img" src="./images/mojito.jpg" alt="" >
                     </li>
                     <li class="drinks__item item-js product">
                         <div>
@@ -208,7 +198,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <img class="image-switch__img img" src="./images/oushen.jpg" alt="" width="110">
+                        <img class="image-switch__img img" src="./images/oushen.jpg" alt="" >
                     </li>
                     <li class="drinks__item item-js product">
                         <div>
@@ -220,7 +210,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <img class="image-switch__img img" src="./images/cocktail.jpg" alt="" width="190">
+                        <img class="image-switch__img img" src="./images/cocktail.jpg" alt="" >
         
                     </li>
                     <li class="drinks__item item-js product">
@@ -236,7 +226,7 @@
                             </button>
                         </div>
         
-                        <img class="image-switch__img img" src="./images/banana.jpg" alt="" width="190">
+                        <img class="image-switch__img img" src="./images/banana.jpg" alt="" >
                     </li>
                     <li class="drinks__item item-js product">
                         <div>
@@ -251,7 +241,7 @@
                             </button>
                         </div>
         
-                        <img class="image-switch__img img" src="./images/ananas.jpg" alt="" width="190">
+                        <img class="image-switch__img img" src="./images/ananas.jpg" alt="" >
                     </li>
                     <li class="drinks__item item-js product">
                         <div>
@@ -263,7 +253,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <img class="image-switch__img img" src="./images/voda.jpg" alt="" width="100">
+                        <img class="image-switch__img img" src="./images/voda.jpg" alt="" >
                         
                     </li>
                 </ul>
@@ -277,7 +267,7 @@
             <ul class="footer__instnetwork">
     
                 <li>
-                    <a class="footer__inst" href="https://www.instagram.com/sushi.szcz.ko/">
+                    <a class="footer__inst" href="https://www.instagram.com/sushi.szcz.tutaj/">
                         <img src="./images/insta.jpg" alt="" width="30px">
                     </a>
                 </li>
@@ -302,6 +292,7 @@
 <script src="./js/menu.js"></script>
 <script src="./js/cart.js"></script>
 <script src="./js/corzina.js"></script>
+<script src="./js/form.js"></script>
 <script>
     (() => {
         document

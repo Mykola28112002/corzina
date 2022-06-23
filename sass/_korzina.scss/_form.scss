@@ -140,4 +140,10 @@
     color: aliceblue;
     margin-top: 20px;
     padding: 5px;
+    &:hover,
+    &:focus {
+        background-color: gold;
+        box-shadow: 0 0 5px 5px gold;
+        border-color: honeydew;
+    }
 }
