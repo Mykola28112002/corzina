@@ -5,7 +5,10 @@ const cart = document.querySelector('.cart');
 const cartQuantity = document.querySelector('.cart__quantity');
 const fullPrice = document.querySelector('.fullprice');
 const cartBox = document.querySelector('.box__js');
+// cartProductsList.childNodes
+
 let price = 0;
+
 
 
 
@@ -32,26 +35,16 @@ const printFullPrice = () => {
 	fullPrice.textContent = `${normalPrice(price)} zl`;
 };
 const printQuantity = () => {
-	let productsListLength = document.querySelector('.list__js').children.length;
+	let productsList = cartProductsList.children;
+	let productsListLength = productsList.length;
 	cartQuantity.textContent = productsListLength;
 	productsListLength === 0 ? cartQuantity.classList.add('un-active-qvontiti') : cartQuantity.classList.remove('un-active-qvontiti');
 
 };
 
-const sessionStorageHost = () => {
-	const parse = cartProductsList.outerHTML;
-	const savedSettings = sessionStorage.getItem("cartProductsList");
-	const parsedSettings = JSON.parse(savedSettings);
-	sessionStorage.setItem("cartProductsList", JSON.stringify(parse));
-	
-    console.log("parsedSettings", parsedSettings);
-	document.addEventListener('reload', (e) => {
-		cartBox.outerHTML = parsedSettings;
-		console.log("242t",cartBox)
-	});
 
-};
-printQuantity();
+
+
 const generateCartProduct = (img, title, price, id) => {
 	return `
 		
@@ -72,21 +65,30 @@ const generateCartProduct = (img, title, price, id) => {
 	`;
 };
 
+
+printQuantity();
+
 const deleteProducts = (productParent) => {
+	
 	let id = productParent.dataset.id;
 	
 	document.querySelector(`.item-js[data-id="${id}"]`).querySelector('.corzina-btn').disabled = false;
 	let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector('.cart-product__price').textContent));
+	
 	minusFullPrice(currentPrice);
 	printFullPrice();
 	productParent.remove();
 
+	sessionStorageHost();
+
+
 	printQuantity();
+	
 };
 
 productsBtn.forEach(el => {
 	el.closest('.product').setAttribute('data-id', randomId());
-
+    
 	el.addEventListener('click', (e) => {
 		let self = e.currentTarget;
 		let parent = self.closest('.product');
@@ -95,19 +97,24 @@ productsBtn.forEach(el => {
 		let title = parent.querySelector('.title').textContent;
 		let priceString = priceWithoutSpaces(parent.querySelector('.menu__price').textContent);
 		let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.menu__price').textContent));
-
+		
 		plusFullPrice(priceNumber);
 
 		printFullPrice();
 
 		cartProductsList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceString, id));
+		
+
+		self.disabled = true;
+		sessionStorageHost();
+
+
 		printQuantity();
 
-		
-		self.disabled = true;
-
-		sessionStorageHost();
-		
+        const car = cartProductsList.querySelectorAll('.cart__item');
+		let pars = car.innerHTML;
+		console.log(car)
+		console.log(pars)
 	});
 
 
@@ -116,7 +123,14 @@ productsBtn.forEach(el => {
 
 cartProductsList.addEventListener('click', (e) => {
 	deleteProducts(e.target.closest('.product'))
-	sessionStorageHost();
 });
+const sessionStorageHost = () => {
+	let parse = cartProductsList.outerHTML;
+	sessionStorage.setItem("cartProductsList", JSON.stringify(parse));
+};
+// cartProductsList - це <ul> 
 
-sessionStorageHost();
+let savedSettings = sessionStorage.getItem("cartProductsList")
+let	parsedSettings = JSON.parse(savedSettings);
+cartBox.insertAdjacentHTML("beforeend", parsedSettings);
+
