@@ -112,9 +112,6 @@ productsBtn.forEach(el => {
 
      
 	});
-
-
-    
 });
 
 cartProductsList.addEventListener('click', (e) => {
