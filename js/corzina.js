@@ -5,8 +5,7 @@ const cart = document.querySelector('.cart');
 const cartQuantity = document.querySelector('.cart__quantity');
 const fullPrice = document.querySelector('.fullprice');
 const cartBox = document.querySelector('.box__js');
-// cartProductsList.childNodes
-
+const cartProducts = document.querySelectorAll('.list__js');
 let price = 0;
 
 
@@ -42,7 +41,7 @@ const printQuantity = () => {
 
 };
 
-
+	
 
 
 const generateCartProduct = (img, title, price, id) => {
@@ -111,10 +110,7 @@ productsBtn.forEach(el => {
 
 		printQuantity();
 
-        const car = cartProductsList.querySelectorAll('.cart__item');
-		let pars = car.innerHTML;
-		console.log(car)
-		console.log(pars)
+     
 	});
 
 
@@ -124,13 +120,13 @@ productsBtn.forEach(el => {
 cartProductsList.addEventListener('click', (e) => {
 	deleteProducts(e.target.closest('.product'))
 });
-const sessionStorageHost = () => {
-	let parse = cartProductsList.outerHTML;
-	sessionStorage.setItem("cartProductsList", JSON.stringify(parse));
+const sessionStorageHost = () => { 
+	const li = cartProductsList.outerHTML
+	sessionStorage.setItem("cartProductsList", JSON.stringify(li))
 };
-// cartProductsList - це <ul> 
+
 
 let savedSettings = sessionStorage.getItem("cartProductsList")
 let	parsedSettings = JSON.parse(savedSettings);
-cartBox.insertAdjacentHTML("beforeend", parsedSettings);
-
+cartProductsList.insertAdjacentHTML("beforeend", parsedSettings);
+printQuantity();
